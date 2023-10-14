@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>DigiSign</title>
+  <link href="script.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+
+</head>
+
+<body>
+  <div class="layout">
+
+    <a class="header" href="#0">
+      <i class="bi bi-list"></i>
+      <div class="header-user"><i class="bi bi-pencil-square"></i>DigiSign</div>
+    </a>
+
+    <div class="sidebar">
+      <ul>
+        <li> <a class="sidebar-list-item active" href="/digisign"><i class="bi bi-pencil"></i><em>Buat Tanda
+              Tangan</em></a></li>
+        <li> <a class="sidebar-list-item" href="/digisign/verif.html"><i class="bi bi-file-break"></i><em>Verifikasi Dokumen
+              Digital</em></a></li>
+      </ul>
+    </div>
+
+    <main class="content">
+      <div class="main-header">
+        <div class="main-title">
+          <h1>Buat Tanda Tangan</h1>
+        </div>
+        <div class="main-form">
+          <form name="event">
+            <input type="text" id="Dokumen" placeholder="Nama Dokumen" required>
+            <input type="text" id="Nomor" placeholder="Nomor">
+            <input type="text" id="Tipe" placeholder="Tipe Dokumen">
+            <input type="text" id="Date" placeholder="Tanggal Dokumen" onfocus="(this.type='date')"
+              onblur="(this.type='text')">
+            <input type="text" id="Untuk" placeholder="Ditujukan Kepada">
+            <input type="text" id="Nama" placeholder="Nama Penandatangan" required>
+            <div id="ttd" class="hide">
+              <canvas id="myCanvas"></canvas>
+              Silahkan Gambar Tanda tangan anda di sebelah kanan qr code
+              <button type="button" id="downloadttd" class="button">Download Tanda Tangan</button>
+            </div>
+            <button type="button" id="submitdatattd" class="button">Save</button>
+            <div id="dropzone" class="drop-zone hide">
+              <span class="drop-zone__prompt">Klik untuk upload file yang sudah di sisipkan tanda tangan untuk mencatat
+                credential
+                keaslian file<br>Jenis file : pdf</span>
+              <input type="file" id="file" name="myFile" onchange="onMyfileChange(this)" class="drop-zone__input"
+                accept=".pdf">
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer_sign">backend and system created by <a href="https://koleksiprihadi.github.io/" target="blank"
+          class="link-secondary">koleksiprihadi<br></a> Thank you <a href="https://mafda.github.io/" target="blank"
+          class="link-secondary">mafda</a> for the design</div>
+    </footer>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="new.js?1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

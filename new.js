@@ -1,4 +1,4 @@
-var url = "https://script.google.com/macros/s/AKfycbygzHU0mQEgmu7OzBCT8CwMAFOubSd9iCo5Ib_KEgN9oQjyw2XxLAcMMJomvtyl848p/exec"
+var url = "https://script.google.com/macros/s/AKfycbz1_aS2Mh4icTCgWMFGAl179F_0TbO_x8aWjz9LHXQHb873Kyiacd0qMOGAhLxAq6_b/exec"
 var id = "";
 // --------------- Form ---------------
 const canvas = document.querySelector("canvas");
@@ -37,7 +37,7 @@ $("#submitdatattd").click(function() {
       }))
 
 
-    toDataURL("https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=" + data.result)
+    toDataURL("https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=koleksiprihadi.github.io/digital-signature/?id=" + data.result)
       .then(dataUrl => {
         make_base(dataUrl);
       })
